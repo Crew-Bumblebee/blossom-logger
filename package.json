@@ -1,0 +1,28 @@
+{
+  "name": "blossom-logger",
+  "version": "1.0.0",
+  "description": "This is the logger util used inside for the blossom project.",
+  "engines": {
+    "node": ">=14"
+  },
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Crew-Bumblebee/blossom-logger.git"
+  },
+  "author": "Syrup (KyungHwan KIM) <rudghks8786@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Crew-Bumblebee/blossom-logger/issues"
+  },
+  "homepage": "https://github.com/Crew-Bumblebee/blossom-logger#readme",
+  "dependencies": {
+    "firebase-admin": "^12.0.0",
+    "mongodb": "^6.4.0",
+    "winston": "^3.12.0",
+    "winston-daily-rotate-file": "^5.0.0"
+  }
+}
