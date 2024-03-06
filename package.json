@@ -1,6 +1,6 @@
 {
   "name": "blossom-logger",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This is the logger util used inside for the blossom project.",
   "engines": {
     "node": ">=14"
