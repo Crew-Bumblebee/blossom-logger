@@ -16,7 +16,7 @@ npm install blossom-logger
 `blossom-logger`를 사용하는 예시 코드는 다음과 같습니다.
 
 ``` js
-const { createLogger } = require('blossom-logger')
+const logger = require('blossom-logger')
 
 const fcmConfig = {
     serviceAccountKey: {
@@ -58,7 +58,7 @@ const winstonConfig = {
 }
 
 const doLogger = async () => {
-    const logger = await createLogger(fcmConfig, mongoConfig, winstonConfig)
+    await logger.init(fcmConfig, mongoConfig, winstonConfig)
 
     logger.fatal("test logger fatal")
     logger.error("test logger error")
@@ -71,6 +71,8 @@ const doLogger = async () => {
 
 doLogger()
 ```
+
+> `logger.init` 를 호출하여 `logger` 를 초기화 한 이후에 `logger` 를 이용해야 합니다. `logger.init` 를 호출하지 않은 상태에서 `fatal`, `error`, `warning` 등과 같은 함수를 호출할 경우 `throw` 오류가 발생합니다.
 
 createLogger 호출시 다음 3개의 객체가 필요합니다.
 - [fcmConfig](#fcmconfig)
